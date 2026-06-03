@@ -1,0 +1,23 @@
+# Core dependencies
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Excel and data processing
+pandas==2.2.0
+openpyxl==3.1.2
+xlsxwriter==3.2.0
+
+# Jira integration
+jira==3.6.0
+requests==2.31.0
+
+# Date/time handling
+python-dateutil==2.8.2
+
+# Utilities
+colorama==0.4.6
+tqdm==4.66.1
+
+# Future AI capabilities (Q2/Q3)
+# openai==1.12.0
+# anthropic==0.18.0

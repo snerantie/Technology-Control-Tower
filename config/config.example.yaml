@@ -1,0 +1,132 @@
+# Technology Control Tower Configuration
+
+organization:
+  name: "VFS IT"
+  cio: "CIO Name"
+  reporting_month: "June 2026"
+
+jira:
+  url: "https://your-company.atlassian.net"
+  username: "${JIRA_USERNAME}"
+  api_token: "${JIRA_API_TOKEN}"
+  projects:
+    - "TECH"
+    - "INFRA"
+    - "SEC"
+  issue_types:
+    - "Epic"
+    - "Story"
+    - "Task"
+    - "Initiative"
+
+data_sources:
+  input_path: "./data/input"
+  output_path: "./data/output"
+  excel_files:
+    - "service_management.xlsx"
+    - "architecture.xlsx"
+    - "risk_management.xlsx"
+    - "pi_delivery.xlsx"
+    - "tech_assurance.xlsx"
+    - "aws_cost.xlsx"
+    - "cyber_security.xlsx"
+    - "audits.xlsx"
+    - "resource_strategy.xlsx"
+    - "third_party_contracts.xlsx"
+
+tpr_areas:
+  - id: 1
+    name: "Service Management"
+    owner: ""
+    description: "Service delivery, SLAs, incident management"
+  - id: 2
+    name: "Architecture"
+    owner: ""
+    description: "Enterprise architecture, technical standards"
+  - id: 3
+    name: "Risk Management"
+    owner: ""
+    description: "Technology risks, mitigation strategies"
+  - id: 4
+    name: "PI Delivery"
+    owner: ""
+    description: "Program Increment delivery, agile metrics"
+  - id: 5
+    name: "Tech Assurance"
+    owner: ""
+    description: "Quality assurance, compliance"
+  - id: 6
+    name: "AWS Cost Optimisation"
+    owner: ""
+    description: "Cloud cost management and optimization"
+  - id: 7
+    name: "Cyber Security"
+    owner: ""
+    description: "Security posture, vulnerabilities, threats"
+  - id: 8
+    name: "Audits"
+    owner: ""
+    description: "Audit findings, remediation tracking"
+  - id: 9
+    name: "Resource Strategy"
+    owner: ""
+    description: "Staffing, skills, capacity planning"
+  - id: 10
+    name: "3rd Party Contracts Management"
+    owner: ""
+    description: "Vendor relationships, contract tracking"
+
+master_register:
+  columns:
+    - "ID"
+    - "Name"
+    - "Type"
+    - "TPR Area"
+    - "Owner"
+    - "Status"
+    - "Priority"
+    - "Start Date"
+    - "End Date"
+    - "Budget"
+    - "Risk Level"
+    - "Description"
+    - "Source"
+    - "Last Updated"
+
+action_tracker:
+  columns:
+    - "Action ID"
+    - "Description"
+    - "TPR Area"
+    - "Owner"
+    - "Due Date"
+    - "Status"
+    - "Priority"
+    - "Source"
+    - "Created Date"
+    - "Completed Date"
+    - "Notes"
+
+governance:
+  meetings:
+    - name: "Weekly Tech Leadership"
+      frequency: "Weekly"
+      day: "Monday"
+      time: "10:00 AM"
+      attendees: ["CIO", "Tech Leads"]
+    - name: "Monthly TPR Review"
+      frequency: "Monthly"
+      day: "First Friday"
+      time: "2:00 PM"
+      attendees: ["CIO", "IT Leadership", "Managers"]
+    - name: "Quarterly Planning"
+      frequency: "Quarterly"
+      day: "Last Wednesday"
+      time: "9:00 AM"
+      attendees: ["CIO", "All IT Staff"]
+
+reporting:
+  output_format: "xlsx"
+  include_charts: true
+  auto_summary: false  # Enable in Q2
+  ai_insights: false   # Enable in Q3
